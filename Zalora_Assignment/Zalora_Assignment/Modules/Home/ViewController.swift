@@ -9,18 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var tableView:UITableView!
+    @IBOutlet private weak var tableView: UITableView!
     
-    var messages = [String]()
-    let cellId = "SendMessageTableViewCell"
-    lazy var emptyLabel:UILabel = {
+    private var messages = [[String]]()
+    private let cellId = "SendMessageTableViewCell"
+    
+    private var emptyLabel:UILabel = {
         let label = UILabel(frame: CGRect.zero)
         label.text = "You're not post any message."
+        label.textColor = .black
         label.sizeToFit()
-        label.center = view.center
         return label
     }()
     
+    //MARK: - View controller life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -34,48 +36,65 @@ class ViewController: UIViewController {
         }
     }
     
+    /// Config UI
     private func configUI() {
+        emptyLabel.center = view.center
+        view.insertSubview(emptyLabel, at: 0)
+        
         tableView.register(UINib(nibName: cellId, bundle: nil),
                            forCellReuseIdentifier: cellId)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.estimatedRowHeight = 50
         tableView.rowHeight = UITableView.automaticDimension
-        
-        view.insertSubview(emptyLabel, at: 0)
     }
 }
 
+//MARK: - UITableViewDataSource
 extension ViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return messages.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return messages.count
+        return messages[section].count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! SendMessageTableViewCell
-        cell.setMessageContent(message: messages[indexPath.row])
+        cell.setMessageContent(message: messages[indexPath.section][indexPath.row])
         return cell
     }
 }
 
+//MARK: - UITableViewDelegate
 extension ViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if messages[section].count > 0 {
+            return "Message \(section + 1):"
+        }
         return nil
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        if messages[section].count > 0 {
+            return 50
+        }
         return 1
     }
 }
 
+//MARK: - SendMessageDelegate
 extension ViewController: SendMessageDelegate {
-    func sendMessages(messages: [String]) {
-        self.messages.append(contentsOf: messages)
-        tableView.reloadData()
+    func sendMessages(newMsgs: [String]) {
+        self.messages.append(newMsgs)
+        let section = messages.count - 1
+        let indexPaths = Array(0..<newMsgs.count).map { IndexPath(row: $0, section: section) }
+        
+        self.tableView.beginUpdates()
+        self.tableView.insertSections(IndexSet(arrayLiteral: section), with: .fade)
+        self.tableView.insertRows(at: indexPaths, with: .fade)
+        self.tableView.endUpdates()
         
         emptyLabel.isHidden = self.messages.count > 0
     }

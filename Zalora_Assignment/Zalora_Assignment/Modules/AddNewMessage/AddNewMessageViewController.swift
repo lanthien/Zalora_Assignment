@@ -9,11 +9,11 @@
 import UIKit
 
 protocol SendMessageDelegate:class {
-    func sendMessages(messages:[String])
+    func sendMessages(newMsgs:[String])
 }
 
 class AddNewMessageViewController: UIViewController {
-    @IBOutlet weak var tvMessage:UITextView!
+    @IBOutlet private weak var tvMessage:UITextView!
     
     weak var delegate: SendMessageDelegate?
     
@@ -21,14 +21,16 @@ class AddNewMessageViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.tvMessage.becomeFirstResponder()
     }
     
-    @IBAction func sendMessage(_ sender: Any) {
+    @IBAction private func sendMessage(_ sender: Any) {
         if tvMessage.text.count > 0 {
             do {
                 let messages = try Utilities.splitMessage(tvMessage.text)
                 if let delegate = self.delegate {
-                    delegate.sendMessages(messages: messages)
+                    delegate.sendMessages(newMsgs: messages)
+                    self.navigationController?.popViewController(animated: true)
                 }
             }
             catch SplitMessageError.NotHaveSpaceCharactor {
@@ -43,6 +45,7 @@ class AddNewMessageViewController: UIViewController {
         }
     }
     
+    ///Show simple alert
     private func presentAlert(title:String?, message:String?) {
         let alertVC = UIAlertController(title: title,
                                         message: message,

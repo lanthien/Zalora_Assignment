@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BE839AF02315016D7F3E84B /* Pods_Zalora_AssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D440BBA209017460F175D990 /* Pods_Zalora_AssignmentTests.framework */; };
+		5C001410F41E66715F1157DE /* Pods_Zalora_Assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E80FFDEE4980800D14C3CE22 /* Pods_Zalora_Assignment.framework */; };
 		C93655442369587400D8AEE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93655432369587400D8AEE3 /* AppDelegate.swift */; };
 		C93655462369587400D8AEE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93655452369587400D8AEE3 /* SceneDelegate.swift */; };
 		C93655482369587400D8AEE3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93655472369587400D8AEE3 /* ViewController.swift */; };
@@ -14,6 +16,13 @@
 		C936554D2369587600D8AEE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C936554C2369587600D8AEE3 /* Assets.xcassets */; };
 		C93655502369587600D8AEE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C936554E2369587600D8AEE3 /* LaunchScreen.storyboard */; };
 		C936555B2369587700D8AEE3 /* Zalora_AssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C936555A2369587700D8AEE3 /* Zalora_AssignmentTests.swift */; };
+		C936556823695A0500D8AEE3 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C936556623695A0500D8AEE3 /* StringExtension.swift */; };
+		C936556923695A0500D8AEE3 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C936556723695A0500D8AEE3 /* UIViewExtension.swift */; };
+		C936556E23695A6100D8AEE3 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = C936556B23695A6100D8AEE3 /* Utilities.swift */; };
+		C936557023695A6100D8AEE3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C936556D23695A6100D8AEE3 /* Constants.swift */; };
+		C93655772369A20D00D8AEE3 /* AddNewMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93655762369A20D00D8AEE3 /* AddNewMessageViewController.swift */; };
+		C936557B2369A49900D8AEE3 /* SendMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93655792369A49900D8AEE3 /* SendMessageTableViewCell.swift */; };
+		C936557C2369A49900D8AEE3 /* SendMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C936557A2369A49900D8AEE3 /* SendMessageTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DE8A11A90CF2FA40EB03C3F /* Pods-Zalora_Assignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zalora_Assignment.debug.xcconfig"; path = "Target Support Files/Pods-Zalora_Assignment/Pods-Zalora_Assignment.debug.xcconfig"; sourceTree = "<group>"; };
+		185E73BDBC061E06080664B8 /* Pods-Zalora_AssignmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zalora_AssignmentTests.release.xcconfig"; path = "Target Support Files/Pods-Zalora_AssignmentTests/Pods-Zalora_AssignmentTests.release.xcconfig"; sourceTree = "<group>"; };
+		9767DD65A8B869B85D5803D9 /* Pods-Zalora_AssignmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zalora_AssignmentTests.debug.xcconfig"; path = "Target Support Files/Pods-Zalora_AssignmentTests/Pods-Zalora_AssignmentTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C93655402369587400D8AEE3 /* Zalora_Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zalora_Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C93655432369587400D8AEE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C93655452369587400D8AEE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +50,16 @@
 		C93655562369587700D8AEE3 /* Zalora_AssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Zalora_AssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C936555A2369587700D8AEE3 /* Zalora_AssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zalora_AssignmentTests.swift; sourceTree = "<group>"; };
 		C936555C2369587700D8AEE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C936556623695A0500D8AEE3 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		C936556723695A0500D8AEE3 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		C936556B23695A6100D8AEE3 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		C936556D23695A6100D8AEE3 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C93655762369A20D00D8AEE3 /* AddNewMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMessageViewController.swift; sourceTree = "<group>"; };
+		C93655792369A49900D8AEE3 /* SendMessageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMessageTableViewCell.swift; sourceTree = "<group>"; };
+		C936557A2369A49900D8AEE3 /* SendMessageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SendMessageTableViewCell.xib; sourceTree = "<group>"; };
+		D440BBA209017460F175D990 /* Pods_Zalora_AssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zalora_AssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF0937DAF7C5B3853D95ED39 /* Pods-Zalora_Assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zalora_Assignment.release.xcconfig"; path = "Target Support Files/Pods-Zalora_Assignment/Pods-Zalora_Assignment.release.xcconfig"; sourceTree = "<group>"; };
+		E80FFDEE4980800D14C3CE22 /* Pods_Zalora_Assignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zalora_Assignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C001410F41E66715F1157DE /* Pods_Zalora_Assignment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +75,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BE839AF02315016D7F3E84B /* Pods_Zalora_AssignmentTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		75531F471312ED7097C4271E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0DE8A11A90CF2FA40EB03C3F /* Pods-Zalora_Assignment.debug.xcconfig */,
+				DF0937DAF7C5B3853D95ED39 /* Pods-Zalora_Assignment.release.xcconfig */,
+				9767DD65A8B869B85D5803D9 /* Pods-Zalora_AssignmentTests.debug.xcconfig */,
+				185E73BDBC061E06080664B8 /* Pods-Zalora_AssignmentTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		894C4565AA7FE7C2D957E60D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E80FFDEE4980800D14C3CE22 /* Pods_Zalora_Assignment.framework */,
+				D440BBA209017460F175D990 /* Pods_Zalora_AssignmentTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C93655372369587400D8AEE3 = {
 			isa = PBXGroup;
 			children = (
 				C93655422369587400D8AEE3 /* Zalora_Assignment */,
 				C93655592369587700D8AEE3 /* Zalora_AssignmentTests */,
 				C93655412369587400D8AEE3 /* Products */,
+				75531F471312ED7097C4271E /* Pods */,
+				894C4565AA7FE7C2D957E60D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,7 +127,9 @@
 			children = (
 				C93655432369587400D8AEE3 /* AppDelegate.swift */,
 				C93655452369587400D8AEE3 /* SceneDelegate.swift */,
-				C93655472369587400D8AEE3 /* ViewController.swift */,
+				C936556A23695A3E00D8AEE3 /* Utilities */,
+				C9365565236959CA00D8AEE3 /* Extension */,
+				C936557123695AD800D8AEE3 /* Modules */,
 				C93655492369587400D8AEE3 /* Main.storyboard */,
 				C936554C2369587600D8AEE3 /* Assets.xcassets */,
 				C936554E2369587600D8AEE3 /* LaunchScreen.storyboard */,
@@ -99,6 +147,59 @@
 			path = Zalora_AssignmentTests;
 			sourceTree = "<group>";
 		};
+		C9365565236959CA00D8AEE3 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C936556623695A0500D8AEE3 /* StringExtension.swift */,
+				C936556723695A0500D8AEE3 /* UIViewExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		C936556A23695A3E00D8AEE3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				C936556D23695A6100D8AEE3 /* Constants.swift */,
+				C936556B23695A6100D8AEE3 /* Utilities.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		C936557123695AD800D8AEE3 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C93655752369A1F400D8AEE3 /* AddNewMessage */,
+				C936557223695AE900D8AEE3 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C936557223695AE900D8AEE3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C93655472369587400D8AEE3 /* ViewController.swift */,
+				C93655782369A49900D8AEE3 /* CustomCell */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C93655752369A1F400D8AEE3 /* AddNewMessage */ = {
+			isa = PBXGroup;
+			children = (
+				C93655762369A20D00D8AEE3 /* AddNewMessageViewController.swift */,
+			);
+			path = AddNewMessage;
+			sourceTree = "<group>";
+		};
+		C93655782369A49900D8AEE3 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				C93655792369A49900D8AEE3 /* SendMessageTableViewCell.swift */,
+				C936557A2369A49900D8AEE3 /* SendMessageTableViewCell.xib */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +207,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C936555F2369587700D8AEE3 /* Build configuration list for PBXNativeTarget "Zalora_Assignment" */;
 			buildPhases = (
+				5423252A84739C33CBE01FFC /* [CP] Check Pods Manifest.lock */,
 				C936553C2369587400D8AEE3 /* Sources */,
 				C936553D2369587400D8AEE3 /* Frameworks */,
 				C936553E2369587400D8AEE3 /* Resources */,
+				F7AD5EB2E42A35B9D85C6C4D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +226,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C93655622369587700D8AEE3 /* Build configuration list for PBXNativeTarget "Zalora_AssignmentTests" */;
 			buildPhases = (
+				0DADA46F032825D8EAC63524 /* [CP] Check Pods Manifest.lock */,
 				C93655522369587700D8AEE3 /* Sources */,
 				C93655532369587700D8AEE3 /* Frameworks */,
 				C93655542369587700D8AEE3 /* Resources */,
@@ -183,6 +287,7 @@
 				C93655502369587600D8AEE3 /* LaunchScreen.storyboard in Resources */,
 				C936554D2369587600D8AEE3 /* Assets.xcassets in Resources */,
 				C936554B2369587400D8AEE3 /* Main.storyboard in Resources */,
+				C936557C2369A49900D8AEE3 /* SendMessageTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,14 +300,84 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0DADA46F032825D8EAC63524 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Zalora_AssignmentTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5423252A84739C33CBE01FFC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Zalora_Assignment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7AD5EB2E42A35B9D85C6C4D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Zalora_Assignment/Pods-Zalora_Assignment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Zalora_Assignment/Pods-Zalora_Assignment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Zalora_Assignment/Pods-Zalora_Assignment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C936553C2369587400D8AEE3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C936556E23695A6100D8AEE3 /* Utilities.swift in Sources */,
+				C93655772369A20D00D8AEE3 /* AddNewMessageViewController.swift in Sources */,
+				C936556923695A0500D8AEE3 /* UIViewExtension.swift in Sources */,
+				C936556823695A0500D8AEE3 /* StringExtension.swift in Sources */,
 				C93655482369587400D8AEE3 /* ViewController.swift in Sources */,
 				C93655442369587400D8AEE3 /* AppDelegate.swift in Sources */,
 				C93655462369587400D8AEE3 /* SceneDelegate.swift in Sources */,
+				C936557023695A6100D8AEE3 /* Constants.swift in Sources */,
+				C936557B2369A49900D8AEE3 /* SendMessageTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +535,7 @@
 		};
 		C93655602369587700D8AEE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DE8A11A90CF2FA40EB03C3F /* Pods-Zalora_Assignment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -377,6 +553,7 @@
 		};
 		C93655612369587700D8AEE3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF0937DAF7C5B3853D95ED39 /* Pods-Zalora_Assignment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -394,6 +571,7 @@
 		};
 		C93655632369587700D8AEE3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9767DD65A8B869B85D5803D9 /* Pods-Zalora_AssignmentTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -415,6 +593,7 @@
 		};
 		C93655642369587700D8AEE3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 185E73BDBC061E06080664B8 /* Pods-Zalora_AssignmentTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
